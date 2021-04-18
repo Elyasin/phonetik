@@ -1,1 +1,16 @@
-/* You can add global styles to this file, and also import other style files */
+.alphonetik {
+  font-family: Alphonetic, sans-serif;
+}
+
+.alphonetik-gb {
+  font-family: AlphoneticGB, sans-serif;
+}
+
+fieldset {
+  padding-left: 0.5em;
+}
+
+legend {
+  float: none;
+  padding: inherit;
+}

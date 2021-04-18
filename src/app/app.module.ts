@@ -2,13 +2,17 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
+import { KeyboardSelectorComponent } from './keyboard-selector/keyboard-selector.component';
+import {NgxElectronModule} from 'ngx-electron';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    KeyboardSelectorComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    NgxElectronModule
   ],
   providers: [],
   bootstrap: [AppComponent]
