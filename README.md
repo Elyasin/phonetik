@@ -1,27 +1,21 @@
 # Phonetik
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.6.
+A simple text editor that supports French and English IPA charachters.
 
-## Development server
+Un simple éditeur de texte avec du support pour des caractères API.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+###English
 
-## Code scaffolding
+This text editor uses the Alphonetik and Alphonetik_GB fonts. Please install these fonts before using the editor.<br>
+See [WikiHow install fonts]
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+###Français
 
-## Build
+Cet éditeur de texte utilise les polices de caractères Alphonetik et Alphonetik_GB. Avant d'utiliser cet éditeur merci
+d'installer les polices de caractères auparavent.<br>
+Voir [WikiHow Comment installer polices de caractères]
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+[WikiHow install fonts]: https://www.wikihow.com/Install-Fonts
+[WikiHow Comment installer polices de caractères]: https://fr.wikihow.com/installer-des-polices-de-caract%C3%A8res
