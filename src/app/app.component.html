@@ -3,8 +3,8 @@
   <div class="row row-cols-auto align-items-center justify-content-start mb-5">
 
     <div class="col">
-      <button type="button" class="btn btn-light border">Enregistrer</button>
-      <button type="button" class="btn btn-light border">Imprimer</button>
+      <button type="button" class="btn btn-light border">Save</button>
+      <button type="button" class="btn btn-light border">Print</button>
     </div>
 
     <div class="col">
@@ -23,14 +23,14 @@
         </div>
 
         <div class="col">
-          <label for="font-size" hidden>Taille</label>
+          <label for="font-size" hidden>Size</label>
           <select class="form-select" name="font-size" id="font-size">
             <option *ngFor="let size of fontSizes()" value="{{size}}" [selected]="size === 12">{{size}}</option>
           </select>
         </div>
 
         <div class="col">
-          <label for="font-color" hidden>Couleur</label>
+          <label for="font-color" hidden>Color</label>
           <input type="color" name="font-color" id="font-color">
         </div>
 
@@ -62,7 +62,7 @@
     <div class="col">
 
       <fieldset class="border">
-        <legend class="w-auto fs-6">Voyelles</legend>
+        <legend class="w-auto fs-6">Vowels</legend>
 
         <div class="row row-cols-auto justify-content-center g-2">
           <div class="col p-2">
@@ -134,7 +134,7 @@
       <div class="row row-cols-auto justify-content-center g-2">
 
         <fieldset class="border">
-          <legend class="w-auto fs-6">Consonnes</legend>
+          <legend class="w-auto fs-6">Consonants</legend>
 
           <div class="row row-cols-auto justify-content-center g-2">
             <div class="col p-2">
@@ -207,7 +207,7 @@
         <div class="col">
 
           <fieldset class="border">
-            <legend class="w-auto fs-6">Semi-Consonne</legend>
+            <legend class="w-auto fs-6">Semi-Consonant</legend>
 
             <div class="row row-cols-auto justify-content-center g-2">
               <div class="col p-2">
@@ -227,7 +227,7 @@
         <div class="col">
 
           <fieldset class="border">
-            <legend class="w-auto fs-6">Autres</legend>
+            <legend class="w-auto fs-6">Other</legend>
 
             <div class="row row-cols-auto justify-content-center g-2">
               <div class="col p-2">
@@ -256,7 +256,7 @@
     <div class="col">
 
       <fieldset class="border">
-        <legend class="w-auto fs-6">Voyelles</legend>
+        <legend class="w-auto fs-6">Vowels</legend>
 
         <div class="row g-2">
           <div class="col p-2">
@@ -336,7 +336,7 @@
     <div class="col">
 
       <fieldset class="border">
-        <legend class="w-auto fs-6">Consonnes</legend>
+        <legend class="w-auto fs-6">Consonants</legend>
 
         <div class="row g-2">
           <div class="col p-2">
@@ -439,15 +439,15 @@
     </div>
 
     <div class="d-grid col-3 border p-2">
-      <button type="button" class="btn btn-light border">Espace</button>
+      <button type="button" class="btn btn-light border">Space</button>
     </div>
 
     <div class="col border p-2">
-      <button type="button" class="btn btn-light border">Effacer</button>
-      <button type="button" class="btn btn-light border">Effacer tout</button>
+      <button type="button" class="btn btn-light border">Delete</button>
+      <button type="button" class="btn btn-light border">Clear all</button>
     </div>
     <div class="col border p-2">
-      <button type="button" class="btn btn-light border">Quiter</button>
+      <button type="button" class="btn btn-light border">Quit</button>
     </div>
 
   </div>
