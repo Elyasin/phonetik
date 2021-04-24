@@ -1,7 +1,8 @@
 import {ComponentFixture, TestBed} from '@angular/core/testing';
 import {AppComponent} from './app.component';
-import {KEYBOARD, KeyboardSelectorComponent} from './keyboard-selector/keyboard-selector.component';
+import {KEYBOARD} from './keyboard-selector/keyboard-selector.component';
 import {FontListService} from './service/font-list.service';
+import {AppModule} from './app.module';
 
 describe('AppComponent', () => {
 
@@ -11,9 +12,11 @@ describe('AppComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
+      imports: [AppModule],
       declarations: [
-        AppComponent,
-        KeyboardSelectorComponent
+        // AppComponent,
+        // KeyboardSelectorComponent,
+        // FrenchKeyboardComponent
       ],
       providers: [
         // {provide: ComponentFixtureAutoDetect, useValue: true},

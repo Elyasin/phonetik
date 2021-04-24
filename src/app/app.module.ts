@@ -4,11 +4,15 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { KeyboardSelectorComponent } from './keyboard-selector/keyboard-selector.component';
 import {NgxElectronModule} from 'ngx-electron';
+import { FrenchKeyboardComponent } from './french-keyboard/french-keyboard.component';
+import { EnglishKeyboardComponent } from './english-keyboard/english-keyboard.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    KeyboardSelectorComponent
+    KeyboardSelectorComponent,
+    FrenchKeyboardComponent,
+    EnglishKeyboardComponent
   ],
   imports: [
     BrowserModule,
