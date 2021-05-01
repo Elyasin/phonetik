@@ -1,18 +1,15 @@
-import {Component, OnInit} from '@angular/core';
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'app-french-keyboard',
   templateUrl: './french-keyboard.component.html',
   styleUrls: ['./french-keyboard.component.css']
 })
-export class FrenchKeyboardComponent implements OnInit {
+export class FrenchKeyboardComponent {
 
   private fontClass = 'alphonetik';
 
   constructor() {
-  }
-
-  ngOnInit(): void {
   }
 
   getFontClass(): string {

@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { FrenchKeyboardComponent } from './french-keyboard.component';
+import {KeyComponent} from '../key/key.component';
 
 describe('FrenchKeyboardComponent', () => {
   let component: FrenchKeyboardComponent;
@@ -8,7 +9,7 @@ describe('FrenchKeyboardComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ FrenchKeyboardComponent ]
+      declarations: [ FrenchKeyboardComponent, KeyComponent ]
     })
     .compileComponents();
   });
@@ -22,4 +23,9 @@ describe('FrenchKeyboardComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should return the English fonts (alphonetik)', () => {
+    expect(component.getFontClass()).toEqual('alphonetik');
+  });
+
 });
