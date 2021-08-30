@@ -13,13 +13,8 @@ describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [AppModule],
-      declarations: [
-        // AppComponent,
-        // KeyboardSelectorComponent,
-        // FrenchKeyboardComponent
-      ],
+      declarations: [],
       providers: [
-        // {provide: ComponentFixtureAutoDetect, useValue: true},
         {provide: FontListService, useValue: fontListServiceStub}
       ]
     }).compileComponents();
@@ -42,6 +37,11 @@ describe('AppComponent', () => {
   it('should load system fonts on init', () => {
     fixture.detectChanges();
     expect(app.fonts).toEqual(fontListServiceStub.getFontList());
+  });
+
+  it('should provide fonts as semi-colon separated string', () => {
+    fixture.detectChanges();
+    expect(app.getFontListForCKEditorConfig()).toEqual('Arial;Verdana');
   });
 
   it('should set the selected keyboard', () => {
@@ -67,26 +67,6 @@ describe('AppComponent', () => {
     const englishKeyboardEl: HTMLElement = fixture.nativeElement.querySelector('#english-keyboard');
     expect(frenchKeyboardEl).toBeNull();
     expect(englishKeyboardEl).not.toBeNull();
-  });
-
-  it('should have have font size options 8,10,...,72', () => {
-    fixture.detectChanges();
-    const fontSizeEl: HTMLElement = fixture.nativeElement.querySelector('#font-size');
-    const optionEls: NodeListOf<HTMLOptionElement> = fontSizeEl.querySelectorAll('option');
-    for (let i = 0; i <= 32; i++) {
-      const optionEl: HTMLOptionElement = optionEls.item(i);
-      const fontSize = 8 + 2 * i;
-      expect(optionEl.textContent).toEqual(fontSize.toString());
-      expect(optionEl.value).toEqual(fontSize.toString());
-    }
-  });
-
-  it('should have font size 12 selected by initially', () => {
-    fixture.detectChanges();
-    const fontSizeEl: HTMLElement = fixture.nativeElement.querySelector('#font-size');
-    const optionEls: NodeListOf<HTMLOptionElement> = fontSizeEl.querySelectorAll('option');
-    // font sizes are 8,10,12,...
-    expect(optionEls.item(2).selected).toBeTruthy();
   });
 
 });

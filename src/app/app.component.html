@@ -1,59 +1,18 @@
 <div class="container mt-5">
 
-  <div class="row row-cols-auto align-items-center justify-content-start mb-5">
+  <div class="row mb-5">
+    <ckeditor
+      editorUrl="./assets/ckeditor/ckeditor.js"
+      data="<p>Hello, world!</p>"
+      [config]="{ font_names: getFontListForCKEditorConfig() }">
+    </ckeditor>
+  </div>
 
-    <div class="col">
-      <button type="button" class="btn btn-light border">Save</button>
-      <button type="button" class="btn btn-light border">Print</button>
-    </div>
-
+  <div class="row row-cols-auto justify-content-center mb-5">
     <div class="col">
       <app-keyboard-selector (selectedKeyboard)="selectKeyboard($event)">
       </app-keyboard-selector>
     </div>
-
-    <div class="col">
-      <div class="row row-cols-auto align-items-center">
-
-        <div class="col">
-          <label for="font" hidden> Font</label>
-          <select class="form-select" name="font" id="font">
-            <option *ngFor="let font of fonts" value="{{font}}" [selected]="font === 'Arial'">{{font}}</option>
-          </select>
-        </div>
-
-        <div class="col">
-          <label for="font-size" hidden>Size</label>
-          <select class="form-select" name="font-size" id="font-size">
-            <option *ngFor="let size of fontSizes()" value="{{size}}" [selected]="size === 12">{{size}}</option>
-          </select>
-        </div>
-
-        <div class="col">
-          <label for="font-color" hidden>Color</label>
-          <input type="color" name="font-color" id="font-color">
-        </div>
-
-      </div>
-    </div>
-
-    <div class="col">
-      <button type="button" class="btn btn-outline-dark border fst-italic" data-bs-toggle="button">I</button>
-      <button type="button" class="btn btn-outline-dark border fw-bold" data-bs-toggle="button">G</button>
-      <button type="button" class="btn btn-outline-dark border text-decoration-underline" data-bs-toggle="button">
-        U
-      </button>
-    </div>
-
-  </div>
-
-  <div id="textField" class="container-fluid border border-3 mb-5" style="height: 15rem; display: inline-block"
-       contenteditable="true">bonjour: [...]<br>
-    <span style="font-family: 'Source Code Pro',sans-serif">Source Code Pro</span><br>
-    <span style="font-family: 'Source Code Pro for Powerline',sans-serif">Source Code Pro for Powerline</span><br>
-    <span style="font-family: 'Arial',sans-serif">Arial</span><br>
-    <span style="font-family: 'Space Mono',sans-serif">Space Mono</span><br>
-    <span style="font-family: 'Times New Roman',serif">Times New Roman</span><br>
   </div>
 
   <app-french-keyboard *ngIf="keyboard === KEYBOARD.FRENCH"></app-french-keyboard>

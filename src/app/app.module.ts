@@ -1,12 +1,13 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
 
-import { AppComponent } from './app.component';
-import { KeyboardSelectorComponent } from './keyboard-selector/keyboard-selector.component';
+import {AppComponent} from './app.component';
+import {KeyboardSelectorComponent} from './keyboard-selector/keyboard-selector.component';
 import {NgxElectronModule} from 'ngx-electron';
-import { FrenchKeyboardComponent } from './keyboard/french-keyboard/french-keyboard.component';
-import { EnglishKeyboardComponent } from './keyboard/english-keyboard/english-keyboard.component';
-import { KeyComponent } from './keyboard/key/key.component';
+import {FrenchKeyboardComponent} from './keyboard/french-keyboard/french-keyboard.component';
+import {EnglishKeyboardComponent} from './keyboard/english-keyboard/english-keyboard.component';
+import {KeyComponent} from './keyboard/key/key.component';
+import {CKEditorModule} from 'ckeditor4-angular';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { KeyComponent } from './keyboard/key/key.component';
   ],
   imports: [
     BrowserModule,
-    NgxElectronModule
+    NgxElectronModule,
+    CKEditorModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -40,4 +40,8 @@ export class AppComponent implements OnInit {
     return sizeArray;
   }
 
+  getFontListForCKEditorConfig(): string {
+    return this.fonts.join(';');
+  }
+
 }
