@@ -1,10 +1,8 @@
 "use strict";
-var __spreadArrays = (this && this.__spreadArrays) || function () {
-    for (var s = 0, i = 0, il = arguments.length; i < il; i++) s += arguments[i].length;
-    for (var r = Array(s), k = 0, i = 0; i < il; i++)
-        for (var a = arguments[i], j = 0, jl = a.length; j < jl; j++, k++)
-            r[k] = a[j];
-    return r;
+var __spreadArray = (this && this.__spreadArray) || function (to, from) {
+    for (var i = 0, il = from.length, j = to.length; i < il; i++, j++)
+        to[j] = from[i];
+    return to;
 };
 exports.__esModule = true;
 var electron_1 = require("electron");
@@ -54,7 +52,7 @@ electron_1.app.on('ready', function () {
     electron_1.Menu.setApplicationMenu(mainMenu);
     mainWindow.on('closed', function () { return mainWindow = null; });
 });
-var menu = __spreadArrays((isMac ? [
+var menu = __spreadArray(__spreadArray(__spreadArray(__spreadArray([], (isMac ? [
     {
         label: electron_1.app.name,
         submenu: [
@@ -64,11 +62,11 @@ var menu = __spreadArrays((isMac ? [
             }
         ]
     }
-] : []), [
+] : [])), [
     {
         role: 'fileMenu'
     }
-], (!isMac ? [
+]), (!isMac ? [
     {
         label: 'Help',
         submenu: [
@@ -78,7 +76,7 @@ var menu = __spreadArrays((isMac ? [
             }
         ]
     }
-] : []), (isDev ? [
+] : [])), (isDev ? [
     {
         label: 'Developer',
         submenu: [
@@ -105,7 +103,7 @@ electron_1.ipcMain.on('request-font-list', function (event) {
         .then(function (fonts) {
         event.returnValue = fonts;
     })["catch"](function (err) {
-        console.log('Error retrieving fonts: ', err);
+        console.error('Error retrieving fonts: ', err);
         event.returnValue = [];
     });
 });

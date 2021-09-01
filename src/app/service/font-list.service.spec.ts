@@ -1,31 +1,26 @@
 import {TestBed} from '@angular/core/testing';
-
 import {FontListService} from './font-list.service';
-import {ElectronService} from 'ngx-electron';
-import {IpcRenderer} from 'electron';
+import {ipcRenderer} from 'electron';
+
+jest.mock('electron', () => ({
+    ipcRenderer: {
+      sendSync: jest.fn().mockReturnValue(['Arial', 'Verdana'])
+    }
+  })
+);
 
 describe('FontListService', () => {
 
   const fontsList = ['Arial', 'Verdana'];
 
   let service: FontListService;
-  let electronServiceStub: Partial<ElectronService>;
-  let ipcRendererStub: Partial<Electron.IpcRenderer>;
 
   beforeEach(() => {
-    ipcRendererStub = {
-      sendSync: jest.fn().mockReturnValue(fontsList)
-    };
-
-    electronServiceStub = {
-      ipcRenderer: ipcRendererStub as IpcRenderer
-    };
-
-    TestBed.configureTestingModule({
-      providers: [{provide: ElectronService, useValue: electronServiceStub}]
-    });
+    TestBed.configureTestingModule({});
     service = TestBed.inject(FontListService);
   });
+
+  afterEach(() => jest.clearAllMocks());
 
   it('should be created', () => {
     expect(service).toBeTruthy();
@@ -39,7 +34,7 @@ describe('FontListService', () => {
     let fonts = service.getFontList();
     expect(fonts).toEqual(fontsList);
     fonts = service.getFontList();
-    expect(ipcRendererStub.sendSync).toHaveBeenCalledTimes(1);
+    expect(ipcRenderer.sendSync).toHaveBeenCalledTimes(1);
     expect(fonts).toEqual(fontsList);
   });
 

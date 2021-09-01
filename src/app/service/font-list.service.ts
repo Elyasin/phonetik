@@ -1,5 +1,5 @@
 import {Injectable} from '@angular/core';
-import {ElectronService} from 'ngx-electron';
+import {ipcRenderer} from 'electron';
 
 @Injectable({
   providedIn: 'root'
@@ -8,15 +8,14 @@ export class FontListService {
 
   private fonts: string[] = [];
 
-  constructor(private electronService: ElectronService) {
-  }
-
   /**
    * Returns an array of font names.
+   * The list of fonts is requested if it was not requested before.
+   * Otherwise the previously requested is returned.
    */
   getFontList(): string[] {
     if (this.fonts.length === 0) {
-      this.fonts = this.electronService.ipcRenderer.sendSync('request-font-list');
+      this.fonts = ipcRenderer.sendSync('request-font-list');
     }
     return this.fonts;
   }

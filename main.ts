@@ -1,4 +1,4 @@
-import {app, BrowserWindow, Menu, ipcMain} from 'electron';
+import {app, BrowserWindow, ipcMain, Menu} from 'electron';
 import {getFonts} from 'font-list';
 
 
@@ -117,7 +117,7 @@ ipcMain.on('request-font-list', (event) => {
       event.returnValue = fonts;
     })
     .catch((err: string) => {
-      console.log('Error retrieving fonts: ', err);
+      console.error('Error retrieving fonts: ', err);
       event.returnValue = [];
     });
 });
