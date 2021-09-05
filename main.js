@@ -1,9 +1,4 @@
 "use strict";
-var __spreadArray = (this && this.__spreadArray) || function (to, from) {
-    for (var i = 0, il = from.length, j = to.length; i < il; i++, j++)
-        to[j] = from[i];
-    return to;
-};
 exports.__esModule = true;
 var electron_1 = require("electron");
 var font_list_1 = require("font-list");
@@ -52,41 +47,13 @@ electron_1.app.on('ready', function () {
     electron_1.Menu.setApplicationMenu(mainMenu);
     mainWindow.on('closed', function () { return mainWindow = null; });
 });
-var menu = __spreadArray(__spreadArray(__spreadArray(__spreadArray([], (isMac ? [
-    {
-        label: electron_1.app.name,
-        submenu: [
-            {
-                label: 'About',
-                click: function () { return createAboutWindow(); }
-            }
-        ]
-    }
-] : [])), [
-    {
-        role: 'fileMenu'
-    }
-]), (!isMac ? [
-    {
-        label: 'Help',
-        submenu: [
-            {
-                label: 'About',
-                click: function () { return createAboutWindow(); }
-            }
-        ]
-    }
-] : [])), (isDev ? [
-    {
-        label: 'Developer',
-        submenu: [
-            { role: 'reload' },
-            { role: 'forcereload' },
-            { type: 'separator' },
-            { role: 'toggleDevtools' },
-        ]
-    },
-] : []));
+var menu = [
+    { role: 'appMenu' },
+    { role: 'fileMenu' },
+    { role: 'editMenu' },
+    { role: 'viewMenu' },
+    { role: 'windowMenu' },
+];
 electron_1.app.on('window-all-closed', function () {
     if (isMac) {
         electron_1.app.quit();

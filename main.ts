@@ -8,6 +8,7 @@ process.env.NODE_ENV = 'development';
 const isDev = process.env.NODE_ENV !== 'production';
 const isMac = process.platform === 'darwin';
 
+// todo Ely Implement about window when about is clicked
 function createAboutWindow(): void {
   const aboutWindow: BrowserWindow = new BrowserWindow({
     title: 'Clavier phonétique',
@@ -59,42 +60,11 @@ app.on('ready', () => {
 });
 
 const menu: any = [
-  ...(isMac ? [
-    {
-      label: app.name,
-      submenu: [
-        {
-          label: 'About',
-          click: () => createAboutWindow(),
-        }
-      ]
-    }
-  ] : []),
-  {
-    role: 'fileMenu',
-  },
-  ...(!isMac ? [
-    {
-      label: 'Help',
-      submenu: [
-        {
-          label: 'About',
-          click: () => createAboutWindow(),
-        }
-      ]
-    }
-  ] : []),
-  ...(isDev ? [
-    {
-      label: 'Developer',
-      submenu: [
-        {role: 'reload'},
-        {role: 'forcereload'},
-        {type: 'separator'},
-        {role: 'toggleDevtools'},
-      ],
-    },
-  ] : []),
+  {role: 'appMenu',},
+  {role: 'fileMenu'},
+  {role: 'editMenu'},
+  {role: 'viewMenu'},
+  {role: 'windowMenu'},
 ];
 
 app.on('window-all-closed', () => {
