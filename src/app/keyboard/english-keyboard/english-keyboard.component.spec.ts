@@ -1,6 +1,6 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { EnglishKeyboardComponent } from './english-keyboard.component';
+import {EnglishKeyboardComponent} from './english-keyboard.component';
 import {KeyComponent} from '../key/key.component';
 import {By} from '@angular/platform-browser';
 
@@ -34,7 +34,6 @@ describe('EnglishKeyboardComponent', () => {
     for (const appKey of appKeys) {
       expect(appKey.componentInstance.key).toBeTruthy();
       expect(appKey.componentInstance.tooltip).toBeTruthy();
-      console.log(appKey.nativeElement);
       // TODO Ely - figure this one out: why appKey native element is undefined ?
       // expect(appKey.nativeElement.classList.contains(component.getFontClass())).toEqual(true);
       // expect(appKey.classes).toContain(component.getFontClass());

@@ -8,73 +8,73 @@
 
       <div class="row g-2">
         <div class="col p-2">
-          <app-key [key]="'F'" [tooltip]="'(a)rrive'" class="{{getFontClass()}}"></app-key>
+          <app-key [key]="'F'" [tooltip]="'(a)rrive'" class="{{getFontClass()}}" (pressedKeyEvent)="pressKey($event)"></app-key>
         </div>
         <div class="col p-2">
-          <app-key [key]="'A'" [tooltip]="'(a)pple'" class="{{getFontClass()}}"></app-key>
+          <app-key [key]="'A'" [tooltip]="'(a)pple'"  class="{{getFontClass()}}" (pressedKeyEvent)="pressKey($event)"></app-key>
         </div>
         <div class="col p-2">
-          <app-key [key]="'e'" [tooltip]="'m(e)n'" class="{{getFontClass()}}"></app-key>
+          <app-key [key]="'e'" [tooltip]="'m(e)n'"  class="{{getFontClass()}}" (pressedKeyEvent)="pressKey($event)"></app-key>
         </div>
         <div class="col p-2">
-          <app-key [key]="'o'" [tooltip]="'g(o)t'" class="{{getFontClass()}}"></app-key>
+          <app-key [key]="'o'" [tooltip]="'g(o)t'"  class="{{getFontClass()}}" (pressedKeyEvent)="pressKey($event)"></app-key>
         </div>
         <div class="col p-2">
-          <app-key [key]="'x'" [tooltip]="'g(oo)d'" class="{{getFontClass()}}"></app-key>
-        </div>
-      </div>
-
-      <div class="row g-2">
-        <div class="col p-2">
-          <app-key [key]="'qF'" [tooltip]="'b(ee)r'" class="{{getFontClass()}}"></app-key>
-        </div>
-        <div class="col p-2">
-          <app-key [key]="'eq'" [tooltip]="'f(a)ce'" class="{{getFontClass()}}"></app-key>
-        </div>
-        <div class="col p-2">
-          <app-key [key]="'Fx'" [tooltip]="'g(o)'" class="{{getFontClass()}}"></app-key>
-        </div>
-        <div class="col p-2">
-          <app-key [key]="'y'" [tooltip]="'c(u)t'" class="{{getFontClass()}}"></app-key>
-        </div>
-        <div class="col p-2">
-          <app-key [key]="'q'" [tooltip]="'s(i)t'" class="{{getFontClass()}}"></app-key>
+          <app-key [key]="'x'" [tooltip]="'g(oo)d'"  class="{{getFontClass()}}" (pressedKeyEvent)="pressKey($event)"></app-key>
         </div>
       </div>
 
       <div class="row g-2">
         <div class="col p-2">
-          <app-key [key]="'c:'" [tooltip]="'sp(o)rt'" class="{{getFontClass()}}"></app-key>
+          <app-key [key]="'qF'" [tooltip]="'b(ee)r'"  class="{{getFontClass()}}" (pressedKeyEvent)="pressKey($event)"></app-key>
         </div>
         <div class="col p-2">
-          <app-key [key]="'u:'" [tooltip]="'y(ou)'" class="{{getFontClass()}}"></app-key>
+          <app-key [key]="'eq'" [tooltip]="'f(a)ce'"  class="{{getFontClass()}}" (pressedKeyEvent)="pressKey($event)"></app-key>
         </div>
         <div class="col p-2">
-          <app-key [key]="'xF'" [tooltip]="'s(u)re'" class="{{getFontClass()}}"></app-key>
+          <app-key [key]="'Fx'" [tooltip]="'g(o)'"  class="{{getFontClass()}}" (pressedKeyEvent)="pressKey($event)"></app-key>
         </div>
         <div class="col p-2">
-          <app-key [key]="'cq'" [tooltip]="'(oi)l'" class="{{getFontClass()}}"></app-key>
+          <app-key [key]="'y'" [tooltip]="'c(u)t'"  class="{{getFontClass()}}" (pressedKeyEvent)="pressKey($event)"></app-key>
         </div>
         <div class="col p-2">
-          <app-key [key]="'ax'" [tooltip]="'(ou)t'" class="{{getFontClass()}}"></app-key>
+          <app-key [key]="'q'" [tooltip]="'s(i)t'"  class="{{getFontClass()}}" (pressedKeyEvent)="pressKey($event)"></app-key>
         </div>
       </div>
 
       <div class="row g-2">
         <div class="col p-2">
-          <app-key [key]="'a:'" [tooltip]="'c(a)r'" class="{{getFontClass()}}"></app-key>
+          <app-key [key]="'c:'" [tooltip]="'sp(o)rt'"  class="{{getFontClass()}}" (pressedKeyEvent)="pressKey($event)"></app-key>
         </div>
         <div class="col p-2">
-          <app-key [key]="'i:'" [tooltip]="'s(ea)t'" class="{{getFontClass()}}"></app-key>
+          <app-key [key]="'u:'" [tooltip]="'y(ou)'"  class="{{getFontClass()}}" (pressedKeyEvent)="pressKey($event)"></app-key>
         </div>
         <div class="col p-2">
-          <app-key [key]="'E:'" [tooltip]="'g(i)rl'" class="{{getFontClass()}}"></app-key>
+          <app-key [key]="'xF'" [tooltip]="'s(u)re'"  class="{{getFontClass()}}" (pressedKeyEvent)="pressKey($event)"></app-key>
         </div>
         <div class="col p-2">
-          <app-key [key]="'eF'" [tooltip]="'(ai)r'" class="{{getFontClass()}}"></app-key>
+          <app-key [key]="'cq'" [tooltip]="'(oi)l'"  class="{{getFontClass()}}" (pressedKeyEvent)="pressKey($event)"></app-key>
         </div>
         <div class="col p-2">
-          <app-key [key]="'aq'" [tooltip]="'l(i)ne'" class="{{getFontClass()}}"></app-key>
+          <app-key [key]="'ax'" [tooltip]="'(ou)t'"  class="{{getFontClass()}}" (pressedKeyEvent)="pressKey($event)"></app-key>
+        </div>
+      </div>
+
+      <div class="row g-2">
+        <div class="col p-2">
+          <app-key [key]="'a:'" [tooltip]="'c(a)r'"  class="{{getFontClass()}}" (pressedKeyEvent)="pressKey($event)"></app-key>
+        </div>
+        <div class="col p-2">
+          <app-key [key]="'i:'" [tooltip]="'s(ea)t'"  class="{{getFontClass()}}" (pressedKeyEvent)="pressKey($event)"></app-key>
+        </div>
+        <div class="col p-2">
+          <app-key [key]="'E:'" [tooltip]="'g(i)rl'"  class="{{getFontClass()}}" (pressedKeyEvent)="pressKey($event)"></app-key>
+        </div>
+        <div class="col p-2">
+          <app-key [key]="'eF'" [tooltip]="'(ai)r'"  class="{{getFontClass()}}" (pressedKeyEvent)="pressKey($event)"></app-key>
+        </div>
+        <div class="col p-2">
+          <app-key [key]="'aq'" [tooltip]="'l(i)ne'"  class="{{getFontClass()}}" (pressedKeyEvent)="pressKey($event)"></app-key>
         </div>
       </div>
 
@@ -88,85 +88,85 @@
 
       <div class="row g-2">
         <div class="col p-2">
-          <app-key [key]="'p'" [tooltip]="'(p)ark'" class="{{getFontClass()}}"></app-key>
+          <app-key [key]="'p'" [tooltip]="'(p)ark'"  class="{{getFontClass()}}" (pressedKeyEvent)="pressKey($event)"></app-key>
         </div>
         <div class="col p-2">
-          <app-key [key]="'f'" [tooltip]="'(f)ace'" class="{{getFontClass()}}"></app-key>
+          <app-key [key]="'f'" [tooltip]="'(f)ace'"  class="{{getFontClass()}}" (pressedKeyEvent)="pressKey($event)"></app-key>
         </div>
         <div class="col p-2">
-          <app-key [key]="'t'" [tooltip]="'(t)ime'" class="{{getFontClass()}}"></app-key>
+          <app-key [key]="'t'" [tooltip]="'(t)ime'"  class="{{getFontClass()}}" (pressedKeyEvent)="pressKey($event)"></app-key>
         </div>
         <div class="col p-2">
-          <app-key [key]="'B'" [tooltip]="'(th)ing'" class="{{getFontClass()}}"></app-key>
+          <app-key [key]="'B'" [tooltip]="'(th)ing'"  class="{{getFontClass()}}" (pressedKeyEvent)="pressKey($event)"></app-key>
         </div>
         <div class="col p-2">
-          <app-key [key]="'tH'" [tooltip]="'(ch)urch'" class="{{getFontClass()}}"></app-key>
+          <app-key [key]="'tH'" [tooltip]="'(ch)urch'"  class="{{getFontClass()}}" (pressedKeyEvent)="pressKey($event)"></app-key>
         </div>
         <div class="col p-2">
-          <app-key [key]="'s'" [tooltip]="'(s)ee'" class="{{getFontClass()}}"></app-key>
-        </div>
-      </div>
-
-      <div class="row g-2">
-        <div class="col p-2">
-          <app-key [key]="'H'" [tooltip]="'(sh)oe'" class="{{getFontClass()}}"></app-key>
-        </div>
-        <div class="col p-2">
-          <app-key [key]="'k'" [tooltip]="'(c)at'" class="{{getFontClass()}}"></app-key>
-        </div>
-        <div class="col p-2">
-          <app-key [key]="'m'" [tooltip]="'(m)ake'" class="{{getFontClass()}}"></app-key>
-        </div>
-        <div class="col p-2">
-          <app-key [key]="'h'" [tooltip]="'(h)ere'" class="{{getFontClass()}}"></app-key>
-        </div>
-        <div class="col p-2">
-          <app-key [key]="'w'" [tooltip]="'a(w)ay'" class="{{getFontClass()}}"></app-key>
-        </div>
-        <div class="col p-2">
-          <app-key [key]="'b'" [tooltip]="'(b)e'" class="{{getFontClass()}}"></app-key>
+          <app-key [key]="'s'" [tooltip]="'(s)ee'"  class="{{getFontClass()}}" (pressedKeyEvent)="pressKey($event)"></app-key>
         </div>
       </div>
 
       <div class="row g-2">
         <div class="col p-2">
-          <app-key [key]="'v'" [tooltip]="'(v)ery'" class="{{getFontClass()}}"></app-key>
+          <app-key [key]="'H'" [tooltip]="'(sh)oe'"  class="{{getFontClass()}}" (pressedKeyEvent)="pressKey($event)"></app-key>
         </div>
         <div class="col p-2">
-          <app-key [key]="'d'" [tooltip]="'(d)og'" class="{{getFontClass()}}"></app-key>
+          <app-key [key]="'k'" [tooltip]="'(c)at'"  class="{{getFontClass()}}" (pressedKeyEvent)="pressKey($event)"></app-key>
         </div>
         <div class="col p-2">
-          <app-key [key]="'D'" [tooltip]="'(th)ese'" class="{{getFontClass()}}"></app-key>
+          <app-key [key]="'m'" [tooltip]="'(m)ake'"  class="{{getFontClass()}}" (pressedKeyEvent)="pressKey($event)"></app-key>
         </div>
         <div class="col p-2">
-          <app-key [key]="'dG'" [tooltip]="'(j)uice'" class="{{getFontClass()}}"></app-key>
+          <app-key [key]="'h'" [tooltip]="'(h)ere'"  class="{{getFontClass()}}" (pressedKeyEvent)="pressKey($event)"></app-key>
         </div>
         <div class="col p-2">
-          <app-key [key]="'z'" [tooltip]="'(z)oo'" class="{{getFontClass()}}"></app-key>
+          <app-key [key]="'w'" [tooltip]="'a(w)ay'"  class="{{getFontClass()}}" (pressedKeyEvent)="pressKey($event)"></app-key>
         </div>
         <div class="col p-2">
-          <app-key [key]="'G'" [tooltip]="'vi(s)ion'" class="{{getFontClass()}}"></app-key>
+          <app-key [key]="'b'" [tooltip]="'(b)e'"  class="{{getFontClass()}}" (pressedKeyEvent)="pressKey($event)"></app-key>
         </div>
       </div>
 
       <div class="row g-2">
         <div class="col p-2">
-          <app-key [key]="'g'" [tooltip]="'(g)o'" class="{{getFontClass()}}"></app-key>
+          <app-key [key]="'v'" [tooltip]="'(v)ery'"  class="{{getFontClass()}}" (pressedKeyEvent)="pressKey($event)"></app-key>
         </div>
         <div class="col p-2">
-          <app-key [key]="'n'" [tooltip]="'(n)ame'" class="{{getFontClass()}}"></app-key>
+          <app-key [key]="'d'" [tooltip]="'(d)og'"  class="{{getFontClass()}}" (pressedKeyEvent)="pressKey($event)"></app-key>
         </div>
         <div class="col p-2">
-          <app-key [key]="'l'" [tooltip]="'(l)ive'" class="{{getFontClass()}}"></app-key>
+          <app-key [key]="'D'" [tooltip]="'(th)ese'"  class="{{getFontClass()}}" (pressedKeyEvent)="pressKey($event)"></app-key>
         </div>
         <div class="col p-2">
-          <app-key [key]="'j'" [tooltip]="'(y)ellow'" class="{{getFontClass()}}"></app-key>
+          <app-key [key]="'dG'" [tooltip]="'(j)uice'"  class="{{getFontClass()}}" (pressedKeyEvent)="pressKey($event)"></app-key>
         </div>
         <div class="col p-2">
-          <app-key [key]="'C'" [tooltip]="'s(in)g'" class="{{getFontClass()}}"></app-key>
+          <app-key [key]="'z'" [tooltip]="'(z)oo'"  class="{{getFontClass()}}" (pressedKeyEvent)="pressKey($event)"></app-key>
         </div>
         <div class="col p-2">
-          <app-key [key]="'r'" [tooltip]="'(r)ide'" class="{{getFontClass()}}"></app-key>
+          <app-key [key]="'G'" [tooltip]="'vi(s)ion'"  class="{{getFontClass()}}" (pressedKeyEvent)="pressKey($event)"></app-key>
+        </div>
+      </div>
+
+      <div class="row g-2">
+        <div class="col p-2">
+          <app-key [key]="'g'" [tooltip]="'(g)o'"  class="{{getFontClass()}}" (pressedKeyEvent)="pressKey($event)"></app-key>
+        </div>
+        <div class="col p-2">
+          <app-key [key]="'n'" [tooltip]="'(n)ame'"  class="{{getFontClass()}}" (pressedKeyEvent)="pressKey($event)"></app-key>
+        </div>
+        <div class="col p-2">
+          <app-key [key]="'l'" [tooltip]="'(l)ive'"  class="{{getFontClass()}}" (pressedKeyEvent)="pressKey($event)"></app-key>
+        </div>
+        <div class="col p-2">
+          <app-key [key]="'j'" [tooltip]="'(y)ellow'"  class="{{getFontClass()}}" (pressedKeyEvent)="pressKey($event)"></app-key>
+        </div>
+        <div class="col p-2">
+          <app-key [key]="'C'" [tooltip]="'s(in)g'"  class="{{getFontClass()}}" (pressedKeyEvent)="pressKey($event)"></app-key>
+        </div>
+        <div class="col p-2">
+          <app-key [key]="'r'" [tooltip]="'(r)ide'"  class="{{getFontClass()}}" (pressedKeyEvent)="pressKey($event)"></app-key>
         </div>
       </div>
 

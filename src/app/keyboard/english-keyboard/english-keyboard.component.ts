@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, EventEmitter, Output} from '@angular/core';
 
 @Component({
   selector: 'app-english-keyboard',
@@ -6,6 +6,8 @@ import {Component} from '@angular/core';
   styleUrls: ['./english-keyboard.component.css']
 })
 export class EnglishKeyboardComponent {
+
+  @Output() pressedKeyEvent = new EventEmitter<string>();
 
   private fontClass = 'alphonetik-gb';
 
@@ -16,4 +18,7 @@ export class EnglishKeyboardComponent {
     return this.fontClass;
   }
 
+  pressKey(key: string) {
+    this.pressedKeyEvent.emit(key);
+  }
 }

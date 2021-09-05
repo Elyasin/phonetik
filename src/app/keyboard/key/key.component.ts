@@ -1,4 +1,4 @@
-import {Component, Input} from '@angular/core';
+import {Component, EventEmitter, Input, Output} from '@angular/core';
 
 @Component({
   selector: 'app-key',
@@ -10,6 +10,13 @@ export class KeyComponent {
   @Input() tooltip: string;
   @Input() key: string;
 
-  constructor() { }
+  @Output() pressedKeyEvent = new EventEmitter<string>();
+
+  constructor() {
+  }
+
+  pressKey() {
+    this.pressedKeyEvent.emit(this.key);
+  }
 
 }

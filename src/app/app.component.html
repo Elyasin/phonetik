@@ -2,9 +2,10 @@
 
   <div class="row mb-5">
     <ckeditor
+      #ckEditorComponent
       editorUrl="./assets/ckeditor/ckeditor.js"
-      data="<p>Hello, world!</p>"
-      [config]="{ font_names: getFontListForCKEditorConfig() }">
+      data='<p>[<span style="font-family:AlphoneticGB">hF&#39;lFxwE:ld</span>] - hello world</p><p>[<span style="font-family:Alphonetic">bIjURmId</span>] - bonjour monde</p>'
+      [config]="getEditorConfig()">
     </ckeditor>
   </div>
 
@@ -15,12 +16,12 @@
     </div>
   </div>
 
-  <app-french-keyboard *ngIf="keyboard === KEYBOARD.FRENCH"></app-french-keyboard>
+  <app-french-keyboard *ngIf="keyboard === KEYBOARD.FRENCH" (pressedKeyEvent)="pasteKey($event, KEYBOARD.FRENCH)"></app-french-keyboard>
 
-  <app-english-keyboard *ngIf="keyboard === KEYBOARD.ENGLISH"></app-english-keyboard>
+  <app-english-keyboard *ngIf="keyboard === KEYBOARD.ENGLISH" (pressedKeyEvent)="pasteKey($event, KEYBOARD.ENGLISH)"></app-english-keyboard>
 
   <div class="row row-cols-auto justify-content-center mb-5 g-2">
-
+<!-- todo Ely implement key pastes when pressed -->
     <div class="col border p-2">
       <button type="button" class="btn btn-light border alphonetik-gb">´</button>
       <button type="button" class="btn btn-light border alphonetik-gb">/</button>
