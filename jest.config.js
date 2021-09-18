@@ -6,5 +6,5 @@ module.exports = {
   setupFilesAfterEnv: ['<rootDir>/setup-jest.ts'],
   collectCoverage: true,
   coverageReporters: ['html'],
-  coverageDirectory: 'coverage/my-app',
+  coverageDirectory: 'coverage/phonetik',
 };

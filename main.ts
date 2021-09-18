@@ -22,7 +22,7 @@ function createAboutWindow(): void {
     }
   });
 
-  aboutWindow.loadFile(`${__dirname}/dist/phonetik/about.html`)
+  aboutWindow.loadFile(`${__dirname}/phonetik/about.html`)
     .then(() => console.log('About window loaded'))
     .catch(err => console.log('About cannot be loaded ', err));
 }
@@ -44,7 +44,7 @@ function createMainWindow(): BrowserWindow {
   if (isDev) {
     mainWindow.webContents.openDevTools();
   }
-  mainWindow.loadFile(`${__dirname}/dist/phonetik/index.html`)
+  mainWindow.loadFile(`${__dirname}/phonetik/index.html`)
     .then(() => console.log('Main window loaded'))
     .catch(err => console.log('Main window cannot be loaded ', err));
 

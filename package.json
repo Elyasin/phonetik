@@ -5,11 +5,12 @@
   "homepage": "http://pointecole.free.fr/phonetik.html",
   "main": "main.js",
   "scripts": {
-    "electron": "tsc main.ts && ng build --base-href ./ && electron .",
+    "electron": "tsc --build tsconfig.json && ng build --base-href ./dist && electron ./dist/main.js",
     "ng": "ng",
     "serve": "ng serve",
     "build": "ng build",
     "test": "ng test",
+    "coverage": "ng test --coverage",
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
