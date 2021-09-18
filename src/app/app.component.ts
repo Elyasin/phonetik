@@ -35,14 +35,6 @@ export class AppComponent implements OnInit {
     this.keyboard = keyboard;
   }
 
-  fontSizes(): number[] {
-    const sizeArray: number[] = [];
-    for (let size = 8; size <= 72; size += 2) {
-      sizeArray.push(size);
-    }
-    return sizeArray;
-  }
-
   getFontListForCKEditorConfig(): string {
     return this.fonts.join(';');
   }

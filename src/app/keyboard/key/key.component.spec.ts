@@ -33,4 +33,13 @@ describe('KeyComponent', () => {
     expect(buttonEl.attributes.getNamedItem('data-bs-toggle').value).toEqual('tooltip');
   });
 
+  it('should emit key when key is pressed', (done) => {
+    component.key = 'x';
+    component.pressedKeyEvent.subscribe((key: string) => {
+      expect(key).toBe(component.key);
+      done();
+    });
+    component.pressKey();
+  });
+
 });

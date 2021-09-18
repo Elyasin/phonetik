@@ -34,13 +34,17 @@ describe('EnglishKeyboardComponent', () => {
     for (const appKey of appKeys) {
       expect(appKey.componentInstance.key).toBeTruthy();
       expect(appKey.componentInstance.tooltip).toBeTruthy();
-      // TODO Ely - figure this one out: why appKey native element is undefined ?
-      // expect(appKey.nativeElement.classList.contains(component.getFontClass())).toEqual(true);
-      // expect(appKey.classes).toContain(component.getFontClass());
-      // expect(appKey.attributes.getNamedItem('key')).toBeTruthy();
-      // expect(appKey.attributes.getNamedItem('tooltip')).toBeTruthy();
-      // expect(appKey.attributes.getNamedItem('class')).toEqual(component.getFontClass());
+      expect(appKey.nativeElement.classList.contains(component.getFontClass())).toEqual(true);
     }
+  });
+
+  it('should emit key event when key is pressed', (done) => {
+    const expectedKey = 'x';
+    component.pressedKeyEvent.subscribe((key: string) => {
+      expect(key).toBe(expectedKey);
+      done();
+    });
+    component.pressKey(expectedKey);
   });
 
 });
