@@ -1,11 +1,12 @@
 {
   "name": "phonetik",
+  "productName": "Phonetik",
   "version": "1.0.0",
   "description": "Text editor with French and English IPA keyboards",
   "homepage": "http://pointecole.free.fr/phonetik.html",
-  "main": "main.js",
+  "main": "./dist/main.js",
   "scripts": {
-    "electron": "tsc --build tsconfig.json && ng build --base-href ./dist && electron ./dist/main.js",
+    "electron": "tsc --build tsconfig.json && ng build --base-href ./ && electron .",
     "ng": "ng",
     "serve": "ng serve",
     "build": "ng build",

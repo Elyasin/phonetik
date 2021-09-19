@@ -8,12 +8,11 @@ process.env.NODE_ENV = 'development';
 const isDev = process.env.NODE_ENV !== 'production';
 const isMac = process.platform === 'darwin';
 
-// todo Ely Implement about window when about is clicked
 function createAboutWindow(): void {
   const aboutWindow: BrowserWindow = new BrowserWindow({
     title: 'Clavier phonétique',
-    width: 300,
-    height: 300,
+    width: 400,
+    height: 400,
     icon: `${__dirname}/assets/icons/Icon_256x256.png`,
     resizable: false,
     backgroundColor: 'white',
@@ -65,6 +64,28 @@ const menu: any = [
   {role: 'editMenu'},
   {role: 'viewMenu'},
   {role: 'windowMenu'},
+  ...(isMac ? [
+    {
+      label: app.name,
+      submenu: [
+        {
+          label: 'About',
+          click: () => createAboutWindow(),
+        }
+      ]
+    }
+  ] : []),
+  ...(!isMac ? [
+    {
+      label: 'Help',
+      submenu: [
+        {
+          label: 'About',
+          click: () => createAboutWindow(),
+        }
+      ]
+    }
+  ] : []),
 ];
 
 app.on('window-all-closed', () => {
@@ -81,6 +102,7 @@ app.on('activate', () => {
 
 
 // Retrieves list of fonts
+// todo Ely - Check if Alphonetic and AlphoneticGB are present
 ipcMain.on('request-font-list', (event) => {
   getFonts({disableQuoting: true})
     .then((fonts: string[]) => {

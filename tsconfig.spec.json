@@ -4,7 +4,6 @@
     "types": [
       "jest"
     ],
-    "module": "commonjs",
     "emitDecoratorMetadata": true,
     "allowJs": true
   },
