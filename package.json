@@ -4,6 +4,7 @@
   "version": "1.0.0",
   "description": "Text editor with French and English IPA keyboards",
   "homepage": "http://pointecole.free.fr/phonetik.html",
+  "repository": "https://github.com/Elyasin/phonetik",
   "main": "./dist/main.js",
   "scripts": {
     "electron": "tsc --build tsconfig.json && ng build --base-href ./ && electron .",
