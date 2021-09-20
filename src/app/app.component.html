@@ -20,27 +20,16 @@
 
   <app-english-keyboard *ngIf="keyboard === KEYBOARD.ENGLISH" (pressedKeyEvent)="pasteKey($event, KEYBOARD.ENGLISH)"></app-english-keyboard>
 
-  <div class="row row-cols-auto justify-content-center mb-5 g-2">
-<!-- todo Ely implement key pastes when pressed -->
-    <div class="col border p-2">
-      <button type="button" class="btn btn-light border alphonetik-gb">´</button>
-      <button type="button" class="btn btn-light border alphonetik-gb">/</button>
-    </div>
-    <div class="col border p-2">
-      <button type="button" class="btn btn-light border alphonetik">[</button>
-      <button type="button" class="btn btn-light border alphonetik">]</button>
-    </div>
+  <div class="row row-cols-auto justify-content-evenly mb-5 g-2">
 
-    <div class="d-grid col-3 border p-2">
-      <button type="button" class="btn btn-light border">Space</button>
+    <div class="col border p-2">
+      <button type="button" class="btn btn-light border alphonetik-gb" (click)="pasteKey('´', KEYBOARD.ENGLISH)">´</button>
+      <button type="button" class="btn btn-light border alphonetik-gb" (click)="pasteKey('/', KEYBOARD.ENGLISH)">/</button>
     </div>
 
     <div class="col border p-2">
-      <button type="button" class="btn btn-light border">Delete</button>
-      <button type="button" class="btn btn-light border">Clear all</button>
-    </div>
-    <div class="col border p-2">
-      <button type="button" class="btn btn-light border">Quit</button>
+      <button type="button" class="btn btn-light border alphonetik" (click)="pasteKey('[', KEYBOARD.FRENCH)">[</button>
+      <button type="button" class="btn btn-light border alphonetik" (click)="pasteKey(']', KEYBOARD.FRENCH)">]</button>
     </div>
 
   </div>

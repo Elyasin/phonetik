@@ -11,14 +11,9 @@ const isMac = process.platform === 'darwin';
 function createAboutWindow(): void {
   const aboutWindow: BrowserWindow = new BrowserWindow({
     title: 'Clavier phonétique',
-    width: 400,
-    height: 400,
     icon: `${__dirname}/assets/icons/Icon_256x256.png`,
-    resizable: false,
+    resizable: true,
     backgroundColor: 'white',
-    webPreferences: {
-      contextIsolation: false
-    }
   });
 
   aboutWindow.loadFile(`${__dirname}/phonetik/about.html`)
