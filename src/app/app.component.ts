@@ -35,10 +35,11 @@ export class AppComponent implements OnInit {
     this.keyboard = keyboard;
   }
 
-  getFontListForCKEditorConfig(): string {
-    return this.fonts.join(';');
-  }
-
+  /**
+   * Pastes the keyboard key to the editor's content (unfiltered)
+   * @param key the key - a single char
+   * @param lang the keyboard language
+   */
   pasteKey(key: string, lang: KEYBOARD) {
     if (lang === KEYBOARD.ENGLISH) {
       this.editor.instance.insertHtml('<span style="font-family: AlphoneticGB, sans-serif;">' + key + '</span>', 'unfiltered_html');
@@ -47,12 +48,20 @@ export class AppComponent implements OnInit {
     }
   }
 
+  /**
+   * Returns the config for the CKEditor.
+   * Sets font names and removes some toolbar buttons.
+   */
   getEditorConfig() {
-   return {
-     font_names: this.getFontListForCKEditorConfig(),
-     removeButtons: 'Cut,Paste,PasteText,PasteFromWord'
-   };
+    return {
+      font_names: this.getFontListForCKEditorConfig(),
+      removeButtons: 'Cut,Paste,PasteText,PasteFromWord'
+    };
   }
 
+  // Returns the ';' separated fonts. Used for CKEditor config.
+  private getFontListForCKEditorConfig(): string {
+    return this.fonts.join(';');
+  }
 
 }

@@ -55,8 +55,11 @@ describe('AppComponent', () => {
     expect(app.fonts).toEqual(fontListServiceStub.getFontList());
   });
 
-  it('should provide fonts as semi-colon separated string', () => {
-    expect(app.getFontListForCKEditorConfig()).toEqual('Arial;Verdana');
+  it('should return the CKEditor config', () => {
+    expect(app.getEditorConfig()).toEqual({
+      "font_names": "Arial;Verdana",
+      "removeButtons": "Cut,Paste,PasteText,PasteFromWord"
+    });
   });
 
   it('should set the selected keyboard', () => {

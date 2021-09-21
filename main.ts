@@ -29,7 +29,7 @@ function createMainWindow(): BrowserWindow {
     icon: `${__dirname}/assets/icons/Icon_256x256.png`,
     resizable: isDev,
     backgroundColor: 'white',
-    webPreferences: {
+    webPreferences: {// todo Ely - apply security best practice (preload...?)
       nodeIntegration: true,
       contextIsolation: false
     }
