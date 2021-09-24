@@ -5,7 +5,7 @@
   "compilerOptions": {
     "baseUrl": "./",
     "noImplicitAny": true,
-    "suppressImplicitAnyIndexErrors": true,
+    "suppressImplicitAnyIndexErrors": false,
     "outDir": "./dist",
     "sourceMap": true,
     "declaration": false,
