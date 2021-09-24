@@ -1,5 +1,6 @@
 import {app, BrowserWindow, ipcMain, Menu} from 'electron';
 import {getFonts} from 'font-list';
+import * as logger from 'electron-log';
 
 
 // Set env
@@ -17,8 +18,8 @@ function createAboutWindow(): void {
   });
 
   aboutWindow.loadFile(`${__dirname}/phonetik/about.html`)
-    .then(() => console.log('About window loaded'))
-    .catch(err => console.log('About cannot be loaded ', err));
+    .then(() => logger.log('About window loaded'))
+    .catch(err => logger.error('About window cannot be loaded ', err));
 }
 
 function createMainWindow(): BrowserWindow {
@@ -39,8 +40,8 @@ function createMainWindow(): BrowserWindow {
     mainWindow.webContents.openDevTools();
   }
   mainWindow.loadFile(`${__dirname}/phonetik/index.html`)
-    .then(() => console.log('Main window loaded'))
-    .catch(err => console.log('Main window cannot be loaded ', err));
+    .then(() => logger.log('Main window loaded'))
+    .catch(err => logger.error('Main window cannot be loaded ', err));
 
   return mainWindow;
 }
@@ -97,14 +98,16 @@ app.on('activate', () => {
 
 
 // Retrieves list of fonts
-// todo Ely - Check if Alphonetic and AlphoneticGB are present
 ipcMain.on('request-font-list', (event) => {
   getFonts({disableQuoting: true})
     .then((fonts: string[]) => {
+      if (!fonts.includes('Alphonetic') || !fonts.includes('AlphoneticGB')) {
+        logger.error('Could not find Alphonetic fonts. Please make sure you install them on your computer.');
+      }
       event.returnValue = fonts;
     })
     .catch((err: string) => {
-      console.error('Error retrieving fonts: ', err);
+      logger.error('Error retrieving fonts: ', err);
       event.returnValue = [];
     });
 });
