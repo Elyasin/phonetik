@@ -1,6 +1,6 @@
 # Phonetik
 
-###Français
+### Français
 
 Un simple éditeur de texte avec du support pour des caractères API.
 
@@ -9,7 +9,7 @@ d'installer les polices de caractères auparavent.<br>
 Les fonts peuvent être téléchargés du site suivant: [Point Ecole]<br>
 Voir [WikiHow Comment installer polices de caractères].
 
-###English
+### English
 
 A simple text editor that supports French and English IPA charachters.
 
