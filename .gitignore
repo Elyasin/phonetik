@@ -40,7 +40,11 @@ npm-debug.log
 yarn-error.log
 testem.log
 /typings
+/screenshots
 
 # System Files
 .DS_Store
 Thumbs.db
+
+# install output/package
+/release-builds
