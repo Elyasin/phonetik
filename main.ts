@@ -4,7 +4,7 @@ import * as logger from 'electron-log';
 
 
 // Set env
-process.env.NODE_ENV = 'development';
+process.env.NODE_ENV ??= 'development';
 
 const isDev = process.env.NODE_ENV !== 'production';
 const isMac = process.platform === 'darwin';
