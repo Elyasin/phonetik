@@ -11,7 +11,7 @@
     "start-prod": "npm run tsc-main && npm run build && cross-env NODE_ENV=production npm run electron",
     "tsc-main": "tsc --build tsconfig.json",
     "package-mac": "cross-env NODE_ENV=production electron-packager . --overwrite --platform=darwin --asar --arch=x64 --icon=src/assets/icons/mac/favicon.icns --out=release-builds",
-    "package-win": "cross-env NODE_ENV=production electron-packager . --overwrite --platform=win32 --asar --arch=ia32 --icon=src/assets/icons/win/favicon.ico --out=release-builds",
+    "package-win32": "cross-env NODE_ENV=production electron-packager . --overwrite --platform=win32 --asar --arch=ia32 --icon=src/assets/icons/win/favicon.ico --out=release-builds",
     "package-linux": "cross-env NODE_ENV=production electron-packager . --overwrite --platform=linux --asar --arch=x64 --icon=src/assets/icons/png/favicon.png --out=release-builds",
     "electron": "electron ." ,
     "ng": "ng",
